@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100;9..144,600&family=Roboto&display=swap');
-@import url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf");
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100;9..144,600&family=Manrope&family=Roboto&display=swap');
 
 :root {
     --main-bg-color: hsla(273, 85%, 13%, 1);
@@ -72,7 +72,8 @@ li.logo img {
 li#apply a{
     margin-inline-end: 165px;
     font-family: "Manrope";
-    text-decoration: none;
+    /* text-decoration: none; */
+    text-decoration-color: var(--green);
 }
 
 nav a:visited {
@@ -85,9 +86,20 @@ nav a:focus {
     color: var(--green);
 }
 
+.heading2-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-block-start: 146px;
+    gap: 37px;
+}
+
 h2 {
     color: var(--white);
-    margin: 146px auto 464px;
+    /* margin-block-start: 146px;
+    margin-inline-start: auto;
+    margin-inline-end: auto; */
     text-align: center;
     font-family: "Fraunces 144pt";
     font-size: 80px;
@@ -101,6 +113,22 @@ h2 {
 h2 span.underline {
     text-decoration: underline;
     text-decoration-color: var(--green);
+}
+
+.learn {
+    text-align: center;
+    padding: 13px 31.5px 16px 32.5px;
+    font-family: "manrope";
+    color: var(--main-bg-color);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 177.778% */
+    letter-spacing: -0.18px;
+    background-color: var(--green);
+    border: 0;
+    /* margin-inline-start: 640px; */
+    /* margin-inline-end: auto; */
 }
 
 .hero-pic img {
