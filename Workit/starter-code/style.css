@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100;9..144,600&family=Roboto&display=swap');
+@import url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf");
+
+:root {
+    --main-bg-color: hsla(273, 85%, 13%, 1);
+    --ghost-white: hsla(274, 100%, 99%, 1);
+    --green: hsla(150, 100%, 63%, 1);
+    --white: #fff;
+}
+
+/* CSS Reset */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -28,3 +39,75 @@ p, h1, h2, h3, h4, h5, h6 {
 #__next {
     isolation: isolate;
 } */
+
+header {
+    background-image: url(./assets/images/bg-pattern-1.svg), url(./assets/images/bg-pattern-2.svg);
+    background-position: left center, right center;
+    background-color: var(--main-bg-color);
+    background-repeat: no-repeat;
+    height: 730px;
+    font-family: "Fraunces";
+}
+
+.top-nav {
+    display: flex;
+    justify-content: stretch;
+    padding-block-start: 56px;
+    padding-inline-start: 0;
+    justify-content: space-between;
+}
+
+.top-nav li {
+    list-style: none;
+}
+
+.logo, #apply {
+    color: var(--white);
+}
+
+li.logo img {
+    margin-inline-start: 165px;
+}
+
+li#apply a{
+    margin-inline-end: 165px;
+    font-family: "Manrope";
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: var(--white);
+    text-decoration: none;
+    /* border: 2px solid var(--white); */
+}
+
+nav a:focus {
+    color: var(--green);
+}
+
+h2 {
+    color: var(--white);
+    margin: 146px auto 464px;
+    text-align: center;
+    font-family: "Fraunces 144pt";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80px; /* 100% */
+    width: 635px;
+    /* white-space: nowrap; */
+}
+
+h2 span.underline {
+    text-decoration: underline;
+    text-decoration-color: var(--green);
+}
+
+.hero-pic img {
+    width: 715px;
+    height: 427px;
+    margin-block-start: 454px;
+    /* margin-block-end: -151px; */
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
