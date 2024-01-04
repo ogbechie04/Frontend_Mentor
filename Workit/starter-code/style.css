@@ -1,38 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100;9..144,600&family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100;9..144,600&family=Manrope&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100;9..144,600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 :root {
-    --main-bg-color: hsla(273, 85%, 13%, 1);
-    --ghost-white: hsla(274, 100%, 99%, 1);
-    --green: hsla(150, 100%, 63%, 1);
-    --white: #fff;
+  --main-bg-color: #24053d;
+  --ghost-white: #fcf8ff;
+  --green: hsla(150, 100%, 63%, 1);
+  --white: #fff;
 }
 
 /* CSS Reset */
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 * {
-    margin: 0;
+  margin: 0;
 }
 
 body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
-input, button, textarea, select {
-    font: inherit;
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 
 /* #root,
@@ -40,130 +56,239 @@ p, h1, h2, h3, h4, h5, h6 {
     isolation: isolate;
 } */
 
+html {
+  background-color: var(--ghost-white);
+}
 header {
-    background-image: url(./assets/images/bg-pattern-1.svg), url(./assets/images/bg-pattern-2.svg);
-    background-position: left center, right center;
-    background-color: var(--main-bg-color);
-    background-repeat: no-repeat;
-    height: 730px;
-    font-family: "Fraunces";
+  background-color: var(#000);
+  background-repeat: no-repeat;
+  height: 730px;
+  width: 100%;
+  z-index: 1000;
+  position: relative;
+  font-family: "Fraunces";
+}
+header:before {
+  content: "";
+  background-color: var(--main-bg-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 50% 50%/0 0 100% 100%;
+  transform: scaleX(2.3);
+  z-index: -10;
 }
 
-/* .spiral-container {
-    display: flex;
-    justify-content: space-between;
-    height: auto;
-
-    /* align-items:
+.spiral1 {
+  width: 270px;
+  height: 215px;
+  position: absolute;
+  left: -100px;
+  top: 116.12px;
 }
 
-.spiral1{
-    /* align-self: flex-start
-    margin-inline-start: -138px;
-    margin-block-start: 34px;
+.spiral2 {
+  position: absolute;
+  width: 141.703px;
+  height: 112.712px;
+  right: -50px;
+  top: 314.07px;
 }
-
-.spiral2{
-    /* align-self: flex-start;
-    margin-inline-end: -48px;
-    margin-block-start: 314px;
-} */
 
 .top-nav {
-    display: flex;
-    justify-content: stretch;
-    padding-block-start: 56px;
-    padding-inline-start: 0;
-    justify-content: space-between;
+  display: flex;
+  justify-content: stretch;
+  padding-block-start: 56px;
+  padding-inline-start: 0;
+  justify-content: space-between;
 }
 
 .top-nav li {
-    list-style: none;
+  list-style: none;
 }
 
-.logo, #apply {
-    color: var(--white);
+.logo,
+#apply {
+  color: var(--white);
 }
 
 li.logo img {
-    margin-inline-start: 165px;
+  margin-inline-start: 165px;
 }
 
-li#apply a{
-    margin-inline-end: 165px;
-    font-family: "Manrope";
-    /* text-decoration: none; */
-    text-decoration-color: var(--green);
+li#apply a {
+  margin-inline-end: 165px;
+  font-family: "Manrope";
+  /* text-decoration: none; */
+  text-decoration-color: var(--green);
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 700;
 }
 
 nav a:visited {
-    color: var(--white);
-    text-decoration: none;
-    /* border: 2px solid var(--white); */
+  color: var(--white);
+  text-decoration: none;
+  /* border: 2px solid var(--white); */
 }
 
 nav a:focus {
-    color: var(--green);
+  color: var(--green);
 }
 
-.heading2-container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin-block-start: 146px;
-    gap: 37px;
+.heading2-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-block-start: 55px;
+  gap: 37px;
 }
 
 h2 {
-    color: var(--white);
-    /* margin-block-start: 146px;
-    margin-inline-start: auto;
+  color: var(--white);
+  /* margin-block-start: 146px; */
+  /* margin-inline-start: auto;
     margin-inline-end: auto; */
-    text-align: center;
-    font-family: "Fraunces 144pt";
-    font-size: 80px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 80px; /* 100% */
-    width: 635px;
-    /* white-space: nowrap; */
+  text-align: center;
+  font-family: "Fraunces 144pt";
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 80px; /* 100% */
+  width: 635px;
+  /* white-space: nowrap; */
 }
 
 h2 span.underline {
-    text-decoration: underline;
-    text-decoration-color: var(--green);
+  text-decoration: underline;
+  text-decoration-color: var(--green);
 }
 
 button.learn {
-    text-align: center;
-    padding: 13px 31.5px 16px 32.5px;
-    font-family: "manrope";
-    color: var(--main-bg-color);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 32px; /* 177.778% */
-    letter-spacing: -0.18px;
-    background-color: var(--green);
-    border: 0;
-    cursor: pointer;
-    border: 2px solid var(--green);
-    /* margin-inline-start: 640px; */
-    /* margin-inline-end: auto; */
+  text-align: center;
+  padding: 13px 31.5px 16px 32.5px;
+  font-family: "manrope";
+  color: var(--main-bg-color);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 177.778% */
+  letter-spacing: -0.18px;
+  background-color: var(--green);
+  border: 0;
+  cursor: pointer;
+  border: 2px solid var(--green);
+  /* margin-inline-start: 640px; */
+  /* margin-inline-end: auto; */
 }
 
 button.learn:active {
-    background-color: var(--main-bg-color);
-    border: 2px solid var(--green);
-    color: var(--green);
+  background-color: var(--main-bg-color);
+  border: 2px solid var(--green);
+  color: var(--green);
 }
 
 .hero-pic img {
-    width: 715px;
-    height: 427px;
-    margin-block-start: 40px;
-    /* margin-block-end: -151px; */
-    margin-inline-start: auto;
-    margin-inline-end: auto;
+  width: 715px;
+  height: 427px;
+  margin-block-start: 50px;
+  /* margin-block-end: -151px; */
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+/* UNDER THE HEADER */
+
+.top-container {
+  background-color: var(--ghost-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block-start: 255px;
+  padding-inline-start: 165px;
+  padding-inline-end: 161px;
+  gap: 26px;
+  height: 743px;
+}
+
+.sub1,
+.sub2,
+.sub3 {
+  width: 354px;
+  font-family: "Fraunces";
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  justify-content: center;
+  align-items: center;
+}
+
+.num {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  border: 1px solid #584d62;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.num-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 28px;
+}
+
+.text__head {
+  color: #24053e;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.text__p {
+  font-family: "Manrope";
+  color: #24053e;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.founder__container {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.founder__picture {
+  height: 477px;
+  width: 477px;
+  padding-block-start: 110px;
+  padding-inline-start: 162.86px;
+}
+
+.founder__test {
+  background-color: #24053e;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  padding: 64px;
+}
+
+@media (max-width: 900px) {
+  .hero-pic img {
+    width: 80%;
+    height: auto;
+  }
 }
